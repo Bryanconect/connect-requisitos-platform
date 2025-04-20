@@ -44,9 +44,8 @@ Plataforma modular para gestão e elicitação de requisitos de software, com fo
 ---
 
 ## 👨‍💻 Autor
-Seu Nome
-    • LinkedIn
-    • Portfólio
+Bryan Oliveira
+Arquiteto de Soluções
 
 ---
 
