@@ -1,72 +1,63 @@
-## About Project
+# 🚀 Connect Requisitos Platform
 
-This project presents a Web system for managing requirements online as a tool to help systems analysts in software factories. The purpose of the application is to solve the problem of lack of software documentation. 
+Plataforma modular para gestão e elicitação de requisitos de software, com foco em rastreabilidade, colaboração entre áreas e controle de versões das histórias de usuário.
 
-The developed application uses the PHP programming language, using the Laravel MVC pattern framework and MySQL database. 
+> Projeto desenvolvido com arquitetura em camadas (MVC + Services), validação robusta e geração de relatórios em PDF. Ideal para empresas que desejam profissionalizar o processo de levantamento de requisitos.
 
-<p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400" alt="Laravel Logo"></a></p>
+---
 
-<p align="center">
-<a href="https://github.com/laravel/framework/actions"><img src="https://github.com/laravel/framework/workflows/tests/badge.svg" alt="Build Status"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/dt/laravel/framework" alt="Total Downloads"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/v/laravel/framework" alt="Latest Stable Version"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
-</p>
+## 📌 Funcionalidades
 
-## About Laravel
+- ✅ Cadastro, edição e exclusão de requisitos
+- ✅ Gestão de histórias de usuário ligadas a requisitos e elicitações
+- ✅ Geração de insights automáticos sobre a qualidade das histórias
+- ✅ Autenticação de usuários com controle de acesso por perfil (admin/padrão)
+- ✅ Geração de relatórios PDF filtráveis
+- ✅ Upload e download de arquivos de elicitação
+- ✅ Painel administrativo com controle de usuários e permissões
 
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
+---
 
-- [Simple, fast routing engine](https://laravel.com/docs/routing).
-- [Powerful dependency injection container](https://laravel.com/docs/container).
-- Multiple back-ends for [session](https://laravel.com/docs/session) and [cache](https://laravel.com/docs/cache) storage.
-- Expressive, intuitive [database ORM](https://laravel.com/docs/eloquent).
-- Database agnostic [schema migrations](https://laravel.com/docs/migrations).
-- [Robust background job processing](https://laravel.com/docs/queues).
-- [Real-time event broadcasting](https://laravel.com/docs/broadcasting).
+## 🧱 Arquitetura
 
-Laravel is accessible, powerful, and provides tools required for large, robust applications.
+- Laravel 9
+- Camadas separadas:
+  - `Controllers`: apenas recebem requisições
+  - `Services`: lógica de negócio isolada
+  - `Models`: Eloquent ORM
+  - `Requests`: validações centralizadas
+- View Blade templates com Bootstrap
 
-## Learning Laravel
+> Aplicação seguindo princípios de **Clean Code** e boas práticas de separação de responsabilidades.
 
-Laravel has the most extensive and thorough [documentation](https://laravel.com/docs) and video tutorial library of all modern web application frameworks, making it a breeze to get started with the framework.
+---
 
-You may also try the [Laravel Bootcamp](https://bootcamp.laravel.com), where you will be guided through building a modern Laravel application from scratch.
+## 🛠️ Tecnologias
 
-If you don't feel like reading, [Laracasts](https://laracasts.com) can help. Laracasts contains over 2000 video tutorials on a range of topics including Laravel, modern PHP, unit testing, and JavaScript. Boost your skills by digging into our comprehensive video library.
+- PHP 8.x
+- Laravel
+- MySQL / MariaDB
+- Bootstrap 5
+- Barryvdh DomPDF
+- Carbon (manipulação de datas)
 
-## Laravel Sponsors
+---
 
-We would like to extend our thanks to the following sponsors for funding Laravel development. If you are interested in becoming a sponsor, please visit the Laravel [Patreon page](https://patreon.com/taylorotwell).
+## 👨‍💻 Autor
+Seu Nome
+    • LinkedIn
+    • Portfólio
 
-### Premium Partners
+---
 
-- **[Vehikl](https://vehikl.com/)**
-- **[Tighten Co.](https://tighten.co)**
-- **[Kirschbaum Development Group](https://kirschbaumdevelopment.com)**
-- **[64 Robots](https://64robots.com)**
-- **[Cubet Techno Labs](https://cubettech.com)**
-- **[Cyber-Duck](https://cyber-duck.co.uk)**
-- **[Many](https://www.many.co.uk)**
-- **[Webdock, Fast VPS Hosting](https://www.webdock.io/en)**
-- **[DevSquad](https://devsquad.com)**
-- **[Curotec](https://www.curotec.com/services/technologies/laravel/)**
-- **[OP.GG](https://op.gg)**
-- **[WebReinvent](https://webreinvent.com/?utm_source=laravel&utm_medium=github&utm_campaign=patreon-sponsors)**
-- **[Lendio](https://lendio.com)**
+## ⭐ Diferenciais técnicos
+    • Separação entre lógica de negócio e controller
+    • Geração de PDF com filtros avançados
+    • Sistema de insights que analisa texto das histórias automaticamente
+    • Controle de status das histórias (Aberta, Concluída, Cancelada)
+    • API OpenAI (comentada no código) para expansão futura
 
-## Contributing
+---
 
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](https://laravel.com/docs/contributions).
-
-## Code of Conduct
-
-In order to ensure that the Laravel community is welcoming to all, please review and abide by the [Code of Conduct](https://laravel.com/docs/contributions#code-of-conduct).
-
-## Security Vulnerabilities
-
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell via [taylor@laravel.com](mailto:taylor@laravel.com). All security vulnerabilities will be promptly addressed.
-
-## License
-
-The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+## 📄 Licença
+Este projeto está licenciado sob a MIT License.
