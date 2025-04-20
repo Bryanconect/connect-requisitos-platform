@@ -3,24 +3,34 @@
 namespace App\Services;
 
 use App\Models\Models\ModelRequisito;
+use App\Models\Models\ModelHistoria;
 
 class RequisitoService
 {
     protected $requisitoModel;
-    
-    public function __construct(RequisitoService $requisitoService, ElicitacaoService $elicitacaoService)
+    protected $historia;
+
+    public function __construct(ModelRequisito $requisitoModel, ModelHistoria $historia)
     {
-        $this->requisitoService = $requisitoService;
-        $this->elicitacaoService = $elicitacaoService;
+        $this->requisitoModel = $requisitoModel;
+        $this->historia = $historia;
     }
 
-    // Método para listar todos os requisitos
-    public function listarRequisitos()
+    // Método para listar todos os requisitos, com opção de limitar e paginar
+    public function listarRequisitos($limit = 10)
     {
-        return $this->requisitoModel->all();
+        return $this->requisitoModel->limit($limit)->get();
     }
 
-    public function cadastrarRequisito($dados)
+    // Método para listar as histórias associadas a um requisito
+    public function listarHistoriasPorRequisito($idRequisito)
+    {
+        // Verificar se o requisito existe e então retornar as histórias associadas
+        return $this->historia->where('requisito_id', $idRequisito)->get(); // 'requisito_id' é a chave estrangeira
+    }
+
+    // Método para cadastrar um requisito
+    public function cadastrarRequisito(array $dados)
     {
         return $this->requisitoModel->create([
             'programa' => $dados['programa'],
@@ -28,18 +38,15 @@ class RequisitoService
         ]);
     }
 
-    public function ativarRequisito($id)
+    // Método para alterar o status de um requisito (ativo ou inativo)
+    public function alterarStatusRequisito($id, $status)
     {
-        return $this->requisitoModel->where('id', $id)->update(['ativo' => 'S']);
+        return $this->requisitoModel->where('id', $id)->update(['ativo' => $status === 'ativo' ? 'S' : 'N']);
     }
 
-    public function inativarRequisito($id)
-    {
-        return $this->requisitoModel->where('id', $id)->update(['ativo' => 'N']);
-    }
-
+    // Método para buscar requisito por ID
     public function buscarPorId($id)
-{
-    return $this->modelRequisito->find($id);
-}
+    {
+        return $this->requisitoModel->find($id);
+    }
 }
